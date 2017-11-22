@@ -8,6 +8,7 @@ def consolidate_cart(cart)
         hash[name] = 1
       end
     end
+  end
   hash
 end
 
