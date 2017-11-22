@@ -2,13 +2,11 @@ def consolidate_cart(cart)
   hash = {}
   cart.each do |items|
     items.each do |name, stats|
-      if hash[name]
+        hash[name] ||= stats
+        hash[name][:count] ||= 0
         hash[name][:count] += 1
-      else
-        hash[name] = 1
       end
     end
-  end
   hash
 end
 
